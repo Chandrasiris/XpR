@@ -3,6 +3,7 @@ from PIL import Image
 import pytesseract
 import os
 import cv2
+import sys
 import base64
 from io import BytesIO
 from dotenv import load_dotenv
