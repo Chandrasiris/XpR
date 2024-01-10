@@ -40,7 +40,7 @@ def index():
 def process_image():
     data = request.get_json()
 
-    # Check if the request contains 'image_data' (uploaded image) or 'camera_data' (camera-captured image)
+    
     if 'image_data' in data:
         image_data = data.get('image_data')
         image_path = process_base64_image(image_data)
@@ -56,4 +56,8 @@ def process_image():
     return jsonify({'result': result})
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
+    app.run(debug=True)
+   # app.run(host='0.0.0.0', port=5000)
+
+
+
